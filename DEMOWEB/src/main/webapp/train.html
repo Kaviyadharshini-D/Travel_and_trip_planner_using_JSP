@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .btn-submit {
+            background-color: #1b3d4d;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .btn-submit:hover {
+            background-color: #0e2732;
+        }
+    </style>
+</head>
+</head>
+<body>
+    <div id="container">
+        <h1>Train Booking</h1>
+        <form action="Trainbook.jsp" method="post">
+            <!-- Train Number Dropdown -->
+            <div class="form-group">
+                <label for="train_num">Train Number:</label>
+                <select id="train_num" name="train_num" required>
+                    <option value="001">001</option>
+                    <option value="002">002</option>
+                    <option value="003">003</option>
+                </select>
+            </div>
+
+            <!-- Train Name Dropdown -->
+            <div class="form-group">
+                <label for="train_name">Train Name:</label>
+                <select id="train_name" name="train_name" required>
+                    <option value="Express">Express</option>
+                    <option value="Local">Local</option>
+                    <option value="Superfast">Superfast</option>
+                </select>
+            </div>
+
+            <!-- Train Type Dropdown -->
+            <div class="form-group">
+                <label for="train_type">Train Type:</label>
+                <select id="train_type" name="train_type" required>
+                    <option value="Electric">Electric</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Steam">Steam</option>
+                </select>
+            </div>
+
+            <!-- Sector Dropdown -->
+            <div class="form-group">
+                <label for="sector">Sector:</label>
+                <select id="sector" name="sector" required>
+                    <option value="North">North</option>
+                    <option value="South">South</option>
+                    <option value="East">East</option>
+                    <option value="West">West</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="arrival_date">Arrival Date:</label>
+                <input type="date" id="arrival_date" name="arrival_date" required>
+            </div>
+            <div class="form-group">
+                <label for="arrival_time">Arrival Time:</label>
+                <input type="time" id="arrival_time" name="arrival_time" required>
+            </div>
+            <div class="form-group">
+                <label for="no_of_adults">Number of Adults:</label>
+                <input type="number" id="no_of_adults" name="no_of_adults" required>
+            </div>
+            <div class="form-group">
+                <label for="no_of_kids">Number of Kids:</label>
+                <input type="number" id="no_of_kids" name="no_of_kids" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="mail_id">Email:</label>
+                <input type="email" id="mail_id" name="mail_id" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn-submit" value="Submit Booking">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

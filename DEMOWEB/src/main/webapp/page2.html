@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Data Display</title>
+</head>
+<body>
+    <h1>User Data Display</h1>
+    <div>
+        <p>User Name: <span id="userName"></span></p>
+        <p>User Email: <span id="userEmail"></span></p>
+    </div>
+
+    <script>
+        // Function to retrieve and display user data from cookies
+        function displayUserData() {
+            var cookies = document.cookie.split(';');
+            var userName = '';
+            var userEmail = '';
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                if (cookie.startsWith("userName=")) {
+                    userName = cookie.substring("userName=".length);
+                } else if (cookie.startsWith("userEmail=")) {
+                    userEmail = cookie.substring("userEmail=".length);
+                }
+            }
+            document.getElementById("userName").textContent = userName;
+            document.getElementById("userEmail").textContent = userEmail;
+        }
+
+        // Call the function to display user data when the page loads
+        displayUserData();
+    </script>
+</body>
+</html>
